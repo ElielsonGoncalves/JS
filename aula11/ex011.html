@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Nacionalidade</title>
+</head>
+<body>
+    <h1>Pesquisa de Nacionalidade</h1>
+    De qual país você é? <input type="text" name="pais" id="pais">
+    <input type="submit" value="Enviar" onclick="test()">
+    <div id="info">
+
+    </div>
+
+    <script>
+        function test() {
+            var pais = window.document.getElementById('pais')
+            var info = window.document.getElementById('info')
+
+            if (pais == 'Brasil') {
+                info.innerHTML = '<p>Você é <strong>brasileiro!</strong><p>'
+            } else {
+                info.innerHTML = '<p>Você é <strong>estrangeiro!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
